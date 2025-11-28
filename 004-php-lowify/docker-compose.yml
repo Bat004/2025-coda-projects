@@ -4,9 +4,9 @@ services:
       context: ./docker
       dockerfile: frankenphp.Dockerfile
     ports:
-      - "80:80" # HTTP
-      - "443:443" # HTTPS
-      - "443:443/udp" # HTTP/3
+      - "8080:80" # HTTP
+      - "444:443" # HTTPS
+      - "444:443/udp" # HTTP/3
     volumes:
       - ./app:/app/public
       - caddy_data:/data
